@@ -20,4 +20,15 @@ impl ProxyHttp for LB {
         let peer = Box::new(HttpPeer::new(upstream, true, "one.one.one.one".to_string()));
         Ok(peer)
     }
+
+    async fn upstream_request_filter(
+        &self,
+        _session: &mut Session,
+        upstream_request: &mut RequestHeader,
+        _ctx: &mut Self::CTX,
+    ) -> Result<()> {
+        println!("upstream request filter: {:?}", upstream_request);
+        upstream_request.insert_header("Host", "one.one.one.one").unwrap();
+        Ok(())
+    }
 }
