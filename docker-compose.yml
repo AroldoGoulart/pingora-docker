@@ -1,0 +1,10 @@
+version: '3'
+services:
+  pingora:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+    ports:
+      - "6188:6188"

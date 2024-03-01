@@ -1,0 +1,9 @@
+[package]
+name = "pingora"
+version = "1.0.0"
+authors = ["Aroldo Goulart <Aroldogooulart@gmail.com>", "Bruno Caitano <caitano44@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+async-trait="0.1"
+pingora = { version = "0.1", features = [ "lb" ] }
