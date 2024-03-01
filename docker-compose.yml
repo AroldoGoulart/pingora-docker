@@ -5,6 +5,7 @@ services:
       context: .
       dockerfile: Dockerfile
     volumes:
-      - .:/app
+      - .:/app  # Monta o diretório atual como volume no contêiner
+      - ./conf.yaml:/app/conf.yaml  # Monta o conf.yaml como volume no contêiner
     ports:
-      - "6188:6188"
+      - "6188:6188"  # Mapeia a porta 6188 conforme necessário
