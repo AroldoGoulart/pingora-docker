@@ -1,0 +1,14 @@
+# Compiled Files
+/target/
+
+# Cargo.lock should be included in version control
+# however, it is sometimes modified by external tools
+# See https://doc.rust-lang.org/cargo/faq.html#cargolock
+Cargo.lock
+
+# IDE/Editor specific files
+.idea/
+.vscode/
+
+# Dependency directories
+/.cargo/
