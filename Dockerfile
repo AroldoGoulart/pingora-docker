@@ -9,4 +9,4 @@ RUN apt-get update && apt-get install -y \
 
 RUN cargo build --release
 
-CMD ["./target/release/pingora", "-c", "conf.yaml", "-d"]
+CMD ["./target/release/pingora"]
